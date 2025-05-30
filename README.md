@@ -6,6 +6,8 @@ This is a backend server built with **Node.js**, **Express.js**, and **MongoDB/M
 - Upload and manage movie data through a full CRUD system.
 
 ## 📁 Project Structure
+
+```
 server/
 │
 ├── config/
@@ -43,6 +45,7 @@ server/
 ├── server.js # Server entry point
 ├── package.json
 └── package-lock.json
+```
 
 ## 🚀 Technologies Used
 
@@ -56,24 +59,34 @@ server/
 
 1. Clone the repository:
 
+```
 git clone https://github.com/your-username/your-repo.git
 cd your-repo
+```
 
 2. Install dependencies:
 
+```
 npm install
+```
 
 3. Create a .env file in the project root and add your environment variables:
 
+```
 PORT=3000
 MONGO_URI=mongodb://localhost:3000/movie-api
 JWT_SECRET=your_secret_key
+```
 
 4. Start the server:
 
+```
 npm start
+```
 
 ## 🧪 Main Endpoints
+```
+>>>>>>> 05252ecba393805b425794e3de4667e2fc09e2b9
 - Auth
 
     POST /api/auth/register — Register a new user
@@ -97,6 +110,8 @@ npm start
     PUT /api/movies/:id — Update a movie
 
     DELETE /api/movies/:id — Delete a movie
+
+```
 
 ## 📚 Course
 FullStack developer course in [DevSchool Academia](https://devschool.com.ar/)
