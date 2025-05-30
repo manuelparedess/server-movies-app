@@ -137,7 +137,177 @@ async function seedMovies() {
 				rating: 8.0,
 				image: 'https://i.ibb.co/kqHkZrt/La-La-Land.webp',
 			},
-		]); // [{12}]
+			{
+				title: "Parasite",
+				releaseYear: 2019,
+				genre: "Thriller",
+				director: "Bong Joon-ho",
+				actors: ["Song Kang-ho", "Choi Woo-shik"],
+				description: "Una familia pobre se infiltra en una casa rica con consecuencias inesperadas.",
+				rating: 8.5,
+				image: "https://i.ibb.co/S4Yr226M/Parasite.jpg"
+			},
+			{
+				title: "The Shawshank Redemption",
+				releaseYear: 1994,
+				genre: "Drama",
+				director: "Frank Darabont",
+				actors: ["Tim Robbins", "Morgan Freeman"],
+				description: "Dos hombres forjan una amistad en prisión mientras uno planea su fuga.",
+				rating: 9.3,
+				image: "https://i.ibb.co/VppF7PgL/The-Shawshank-Redemption.jpg"
+			},
+			{
+				title: "The Godfather",
+				releaseYear: 1972,
+				genre: "Crime",
+				director: "Francis Ford Coppola",
+				actors: ["Marlon Brando", "Al Pacino"],
+				description: "La historia de la familia criminal Corleone en Nueva York.",
+				rating: 9.2,
+				image: "https://i.ibb.co/Y7TSbRTZ/The-Godfather.jpg"
+			},
+			{
+				title: "The Dark Knight",
+				releaseYear: 2008,
+				genre: "Action",
+				director: "Christopher Nolan",
+				actors: ["Christian Bale", "Heath Ledger"],
+				description: "Batman enfrenta al Joker, un criminal caótico que aterroriza Gotham.",
+				rating: 9.0,
+				image: "https://i.ibb.co/gbzJ9gcx/The-Dark-Knight.jpg"
+			},
+			{
+				title: "Pulp Fiction",
+				releaseYear: 1994,
+				genre: "Crime",
+				director: "Quentin Tarantino",
+				actors: ["John Travolta", "Samuel L. Jackson"],
+				description: "Historias entrelazadas de crimen y redención en Los Ángeles.",
+				rating: 8.9,
+				image: "https://i.ibb.co/yBFD0DsM/Pulp-Fiction.jpg"
+			},
+			{
+				title: "Forrest Gump",
+				releaseYear: 1994,
+				genre: "Drama",
+				director: "Robert Zemeckis",
+				actors: ["Tom Hanks", "Robin Wright"],
+				description: "Un hombre con discapacidad intelectual vive eventos históricos clave de EE.UU.",
+				rating: 8.8,
+				image: "https://i.ibb.co/KjDwVy83/Forrest-Gump.jpg"
+			},
+			{
+				title: "Inception",
+				releaseYear: 2010,
+				genre: "Sci-Fi",
+				director: "Christopher Nolan",
+				actors: ["Leonardo DiCaprio", "Joseph Gordon-Levitt"],
+				description: "Un ladrón entra en los sueños para robar o implantar ideas.",
+				rating: 8.8,
+				image: "https://i.ibb.co/fYsGSC7C/Inception.jpg"
+			},
+			{
+				title: "Fight Club",
+				releaseYear: 1999,
+				genre: "Drama",
+				director: "David Fincher",
+				actors: ["Brad Pitt", "Edward Norton"],
+				description: "Un hombre desilusionado forma un club secreto de peleas clandestinas.",
+				rating: 8.8,
+				image: "https://i.ibb.co/8L134D1X/Fight-Club.jpg"
+			},
+			{
+				title: "Goodfellas",
+				releaseYear: 1990,
+				genre: "Crime",
+				director: "Martin Scorsese",
+				actors: ["Robert De Niro", "Ray Liotta"],
+				description: "La vida de un mafioso desde su adolescencia hasta su caída.",
+				rating: 8.7,
+				image: "https://i.ibb.co/tw21ff0T/Goodfellas.jpg"
+			},
+			{
+				title: "The Lord of the Rings: The Return of the King",
+				releaseYear: 2003,
+				genre: "Fantasy",
+				director: "Peter Jackson",
+				actors: ["Elijah Wood", "Viggo Mortensen"],
+				description: "Frodo y Sam completan su viaje para destruir el Anillo Único.",
+				rating: 8.9,
+				image: "https://i.ibb.co/zVvWXTwB/The-Lord-of-the-Rings-The-Return-of-the-King.jpg"
+			},
+			{
+				title: "The Silence of the Lambs",
+				releaseYear: 1991,
+				genre: "Thriller",
+				director: "Jonathan Demme",
+				actors: ["Jodie Foster", "Anthony Hopkins"],
+				description: "Una joven agente del FBI busca la ayuda de un asesino para atrapar a otro.",
+				rating: 8.6,
+				image: "https://i.ibb.co/PGR4Bxw1/The-Silence-of-the-Lambs.jpg"
+			},
+			{
+				title: "Gladiator",
+				releaseYear: 2000,
+				genre: "Action",
+				director: "Ridley Scott",
+				actors: ["Russell Crowe", "Joaquin Phoenix"],
+				description: "Un general romano cae en desgracia y regresa como gladiador para vengarse.",
+				rating: 8.5,
+				image: "https://i.ibb.co/b5BwLtGq/Gladiator.jpg"
+			},
+			{
+				title: "Titanic",
+				releaseYear: 1997,
+				genre: "Romance",
+				director: "James Cameron",
+				actors: ["Leonardo DiCaprio", "Kate Winslet"],
+				description: "Una historia de amor trágica a bordo del Titanic.",
+				rating: 7.9,
+				image: "https://i.ibb.co/LhQn1X9f/Titanic.jpg"
+			},
+			{
+				title: "The Green Mile",
+				releaseYear: 1999,
+				genre: "Drama",
+				director: "Frank Darabont",
+				actors: ["Tom Hanks", "Michael Clarke Duncan"],
+				description: "Un guardia de prisión descubre los poderes sobrenaturales de un recluso.",
+				rating: 8.6,
+				image: "https://i.ibb.co/HTxYyg8k/The-Green-Mile.jpg"
+			},
+			{
+				title: "The Lion King",
+				releaseYear: 1994,
+				genre: "Animation",
+				director: "Roger Allers, Rob Minkoff",
+				actors: ["Matthew Broderick", "James Earl Jones"],
+				description: "El joven león Simba debe reclamar su lugar como rey.",
+				rating: 8.5,
+				image: "https://i.ibb.co/NRfJTpH/The-Lion-King.jpg"
+			},
+			{
+				title: "Saving Private Ryan",
+				releaseYear: 1998,
+				genre: "War",
+				director: "Steven Spielberg",
+				actors: ["Tom Hanks", "Matt Damon"],
+				description: "Un escuadrón busca a un soldado en medio de la Segunda Guerra Mundial.",
+				rating: 8.6,
+				image: "https://i.ibb.co/8nPWdfqR/Saving-Private-Ryan.jpg"
+			},
+			{
+				title: "Whiplash",
+				releaseYear: 2014,
+				genre: "Drama",
+				director: "Damien Chazelle",
+				actors: ["Miles Teller", "J.K. Simmons"],
+				description: "Un joven baterista lucha por la excelencia bajo la dirección de un instructor abusivo.",
+				rating: 8.5,
+				image: "https://i.ibb.co/9mGYn4ry/Whiplash.jpg"
+			},
+		]);
 		console.log('Películas insertadas');
 	} catch (error) {
 		console.error('Error al insertar películas:', error);
