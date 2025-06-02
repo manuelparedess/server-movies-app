@@ -9,8 +9,10 @@ const register = async (req, res) => {
     const { firstname, lastname, email, password } = req.body;
 
     //Validar los datos
-    if(!email) return res.status(400).send({ msg: 'El email es obligatorio' });
-    if(!password) return res.status(400).send({ msg: 'La contraseña es obligatorio' });
+    if(!email) return res.status(400).send({ msg: '❌ Email is required' });
+    if(!/\S+@\S+\.\S+/.test(email)) return res.status(400).send({ msg: '❌ Invalid email address' });
+    if(!password) return res.status(400).send({ msg: '❌ Password is required' });
+    if(password.length < 6) return res.status(400).send({ msg: '❌ Password must be at least 6 characters long' });
 
     //Crear el usuario
     const user = new User({
@@ -18,7 +20,7 @@ const register = async (req, res) => {
         lastname,
         email: email.toLowerCase(),
         password,
-        active: false
+        admin: false
     })
 
     //Encriptar la contraseña
@@ -27,9 +29,9 @@ const register = async (req, res) => {
     //Guardar en la Base de Datos
     try {
         await user.save();
-        res.status(201).send({ msg: 'Usuario registrado' })
+        res.status(201).send({ msg: '✅ Registration successful' })
     } catch (error) {
-        res.status(500).send({ msg: 'Error al registrar el usuario' })
+        res.status(500).send({ msg: '❌ Registration failed. Please try again' })
     }
 }
 
@@ -40,27 +42,26 @@ const login = async (req, res) => {
     const { email, password } = req.body;
 
     //Validar los datos
-    if(!email) return res.status(400).send({ msg: 'El email es obligatorio' });
-    if(!password) return res.status(400).send({ msg: 'La contraseña es obligatoria' });
+    if(!email) return res.status(400).send({ msg: '❌ Email is required' });
+    if(!/\S+@\S+\.\S+/.test(email)) return res.status(400).send({ msg: '❌ Invalid email address' });
+    if(!password) return res.status(400).send({ msg: '❌ Password is required' });
+    if(password.length < 6) return res.status(400).send({ msg: '❌ Password must be at least 6 characters long' });
 
     try {
         //Verificar que exista ese usuario en la base de datos
         const user = await User.findOne({ email: email.toLowerCase() });
-        if(!user) return res.status(404).send({ msg: 'Usuario no encontrado' });
+        if(!user) return res.status(404).send({ msg: '❌ User not found.' });
 
         //Verificar que la contraseña es la correcta
         const isValid = await bcryptjs.compare(password, user.password);
-        if(!isValid) return res.status(400).send({ msg: 'Contraseña invalida' });
-
-        //Verificar si el usuario esta activo
-        if(!user.active) return res.status(401).send({ msg: 'Usuario no autorizado' });
+        if(!isValid) return res.status(400).send({ msg: '❌ Incorrect password' });
 
         //Si esta todo bien, crear el token
         const token = jwt.createAccessToken(user);
         res.status(200).send({ token: token });
         
     } catch (error) {
-        res.status(500).send({ msg: 'Error en el login' });
+        res.status(500).send({ msg: '❌ Login failed. Please try again' });
     }
 
 }
