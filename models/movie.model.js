@@ -9,7 +9,14 @@ const MovieSchema = mongoose.Schema({
     actors: [{ type: String }],
     description: String,
     rating: Number,
-    image: String
+    image: String,
 });
+
+// Método estático para buscar por nombre
+MovieSchema.statics.findByName = function(query) {
+    return this.find({
+      title: { $regex: query, $options: 'i' }
+    });
+};
 
 module.exports = mongoose.model('Movie', MovieSchema);

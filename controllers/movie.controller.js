@@ -82,6 +82,24 @@ const getMovie = async (req, res) => {
     }
 }
 
+const getMovieByName = async (req, res) => {
+    //obtener el query
+    const { q } = req.query;
+    if (!q) return res.status(400).json({ message: 'No se recibio la query' });
+
+    try {
+        const movie = await Movie.findByName(q);
+        if(movie.length == 0) {
+            return res.status(404).send({ msg: 'No se encontraron peliculas'});
+        }
+        res.status(200).send(movie);
+
+    } catch (error) {
+        res.status(500).send({ msg: 'Error al obtener peliculas'});
+        
+    }
+}
+
 
 
 
@@ -135,5 +153,6 @@ module.exports = {
     getMovies,
     updateMovie, 
     deleteMovie,
-    getMovie
+    getMovie,
+    getMovieByName
 };

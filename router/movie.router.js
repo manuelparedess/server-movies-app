@@ -11,6 +11,7 @@ const md_auth = require('../middlewares/authenticated.js');
 //Rutas publicas
 router.get('/movies', MovieController.getMovies);
 router.get('/movie/:id', MovieController.getMovie);
+router.get('/movies/search', MovieController.getMovieByName);
 
 //Rutas privadas
 router.post('/movie', [md_auth.verifyToken, md_auth.isAdmin, md_upload], MovieController.createMovie);
