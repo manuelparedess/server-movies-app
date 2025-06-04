@@ -88,11 +88,11 @@ const getMovieByName = async (req, res) => {
     if (!q) return res.status(400).json({ message: 'No se recibio la query' });
 
     try {
-        const movie = await Movie.findByName(q);
-        if(movie.length == 0) {
-            return res.status(404).send({ msg: 'No se encontraron peliculas'});
+        const movies = await Movie.findByName(q);
+        if(movies.length == 0) {
+            return res.status(200).send([]);
         }
-        res.status(200).send(movie);
+        res.status(200).send(movies);
 
     } catch (error) {
         res.status(500).send({ msg: 'Error al obtener peliculas'});
