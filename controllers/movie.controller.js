@@ -42,8 +42,8 @@ const getMovies = async (req, res) => {
 
         const total = await Movie.countDocuments();
         const totalPages = Math.ceil( total / limit );
-        const next = page < totalPages ? `https://server-movies-app.onrender.com/api/movies?page=${page + 1}&limit=${limit}` : null;
-        const prev = page > 1 ? `https://server-movies-app.onrender.com/api/movies?page=${page - 1}&limit=${limit}` : null;
+        const next = page < totalPages ? `http://localhost:5000/api/movies?page=${page + 1}&limit=${limit}` : null;
+        const prev = page > 1 ? `http://localhost:5000/api/movies?page=${page - 1}&limit=${limit}` : null;
 
         const response = {
             info: {

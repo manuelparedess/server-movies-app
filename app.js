@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //configurar static folder
-app.use(express.static('uploads'));
+app.use('/uploads', express.static('uploads'));
 
 //importar rutas
 const authRoutes = require('./router/auth.router.js');
